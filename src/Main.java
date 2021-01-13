@@ -1,6 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
+        // zadanie 1
         char[] red = {'r','e','d'};
         char[] blue = {'b','l','u','e'};
         Radiator r1 = new Radiator(red, 55, 1025);
@@ -19,12 +20,26 @@ public class Main {
         radiators[1].weight = 119;
         radiators[1].diplay();
 
-        // wyświetl w kWh
+        // zadanie 2
         double powerInKwh = radiators[1].powerInKwh();
         if(powerInKwh >= 5) {
             System.out.println("High-power radiator.");
         } else {
             System.out.println("Low-power radiator");
         }
+
+        System.out.println("---------------");
+        // zadanie 3
+        Calculator c = new Calculator();
+
+        int sum = c.sum(4,5);
+        System.out.println("4 + 5 = "+sum);
+
+        sum = c.sum(100,54);
+        System.out.println("100 + 54 = "+sum);
+
+        System.out.println("-123 + 4 = "+c.sum(-123,4));
+
+        System.out.println("5+1+5+1+5 = "+c.sum5Arguments(5,1,5,1,5));
     }
 }
